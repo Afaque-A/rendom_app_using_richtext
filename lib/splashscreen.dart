@@ -36,20 +36,6 @@ class _SplashscreenState extends State<Splashscreen> {
             ),
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Search action
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.notifications),
-            onPressed: () {
-              // Notification action
-            },
-          ),
-        ],
       ),
       body: Center(
         child: Text.rich(
