@@ -19,15 +19,20 @@ class _SplashscreenState extends State<Splashscreen> {
         shadowColor: Colors.purple,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(50), // Bottom corners rounded
+            bottom: Radius.circular(20), // Bottom corners rounded
           ),
         ),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.indigo, Colors.purple],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+        flexibleSpace: ClipRRect(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20), // Same radius as shape
+          ),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.indigo, Colors.purple],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
           ),
         ),
