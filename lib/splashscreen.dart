@@ -15,7 +15,36 @@ class _SplashscreenState extends State<Splashscreen> {
       appBar: AppBar(
         title: Text('SplashScreen'),
         centerTitle: true,
-        backgroundColor: Colors.indigo,
+        elevation: 10,
+        shadowColor: Colors.purple,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(50), // Bottom corners rounded
+          ),
+        ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.indigo, Colors.purple],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Search action
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () {
+              // Notification action
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Text.rich(
